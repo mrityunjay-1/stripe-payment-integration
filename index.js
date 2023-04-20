@@ -23,6 +23,8 @@ server.post("/stripe-webhook", async (req, res) => {
 
         await re.save();
 
+        res.status(200).send({message: "ok"});
+
     } catch (err) {
         console.log("Error: ", err);
     }
